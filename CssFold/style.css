@@ -1,0 +1,700 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, sans-serif;
+}
+
+/* Header Responsive Fixes */
+header {
+  background-color: #ffffff;
+  margin: 0 auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0.5rem 0;
+  z-index: 1000;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.upper-list ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  padding: 0 1rem;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.upper-list ul::-webkit-scrollbar {
+  display: none;
+}
+
+.upper-list ul li a {
+  color: black;
+  text-decoration: none;
+  font-size: 0.75rem;
+  white-space: nowrap;
+  padding: 0.5rem;
+  transition: color 0.3s;
+}
+
+.upper-list ul li a:hover {
+  color: #0071e3;
+}
+
+.upper-list ul li img {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+}
+
+.upper-list {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* iPhone Section Responsive */
+.iPhone {
+  text-align: center;
+  background-color: #f5f5f7;
+  padding: 6rem 1rem 2rem;
+  margin-top: 40px;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 600;
+}
+
+.iPhone .h3 {
+  opacity: 0.8;
+  font-size: clamp(1.25rem, 3vw, 1.75rem);
+  font-weight: 400;
+  margin-top: 0.5rem;
+}
+
+.kebu {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1.5rem 0;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.but-1,
+.but2 {
+  padding: 0.75rem 1.5rem;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.but-1 {
+  background-color: #0071e3;
+  color: white;
+  border: none;
+}
+
+.but-1:hover {
+  background-color: #0056b3;
+}
+
+.but2 {
+  color: #0071e3;
+  border: 1px solid #0071e3;
+  background: transparent;
+}
+
+.but2:hover {
+  background-color: #0071e3;
+  color: white;
+}
+
+.parimge,
+.threephone img,
+.wtcgimg img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* iPad Container Responsive */
+.iPadcontainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+@media (min-width: 768px) {
+  .iPadcontainer {
+    flex-direction: row;
+  }
+}
+
+.other {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .other {
+    width: 50%;
+    margin-bottom: 0;
+  }
+}
+
+.new {
+  background-color: #afdcef;
+  padding: 2rem 1rem;
+}
+
+.new-2 {
+  background-color: #f5f5f7;
+  text-align: center;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.new-2 p {
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  margin: 0.5rem 0;
+}
+
+.ipadh {
+  display: inline-block;
+  margin-top: 1rem;
+  background-color: #0071e3;
+  padding: 0.75rem 1.5rem;
+  border-radius: 20px;
+  color: white;
+  text-decoration: none;
+  font-size: 0.875rem;
+  transition: background-color 0.3s;
+}
+
+.ipadh:hover {
+  background-color: #0056b3;
+}
+
+/* Saten Section (Two Column Layout) */
+.saten {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .saten {
+    flex-direction: row;
+  }
+}
+
+/* Remove the display: flex from ::before - this was causing issues */
+.bcg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 30%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
+  pointer-events: none; /* Important: allows clicks to go through */
+  z-index: 1;
+}
+
+/* Main container for both cards */
+.saten {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+@media (min-width: 768px) {
+  .saten {
+    flex-direction: row;
+  }
+}
+
+/* Each card styling */
+.bcg {
+  width: 100%;
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+@media (min-width: 768px) {
+  .bcg {
+    width: 50%;
+    height: 500px;
+  }
+}
+
+/* Remove the separate gradient-overlay class if you're using ::before */
+.gradient-overlay {
+  display: none; /* Remove this if not needed */
+}
+
+/* Content styling - make sure it's above the overlay */
+.book {
+  position: relative;
+  z-index: 2;
+  color: white;
+  padding: 2rem;
+  text-align: center;
+}
+
+.book h2 {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  margin-bottom: 0.5rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.book h3,
+.book p {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  font-weight: 400;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  opacity: 0.9;
+}
+
+/* Button container */
+.both {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0 2rem 2rem;
+  flex-wrap: wrap;
+}
+
+/* Button styling */
+.ipadh {
+  display: inline-block;
+  background-color: #0071e3;
+  padding: 0.75rem 1.5rem;
+  border-radius: 20px;
+  color: white;
+  text-decoration: none;
+  font-size: 0.875rem;
+  transition: background-color 0.3s;
+}
+
+.ipadh:hover {
+  background-color: #0056b3;
+}
+
+.but2 {
+  padding: 0.75rem 1.5rem;
+  border-radius: 20px;
+  color: #0071e3;
+  border: 1px solid #0071e3;
+  background: rgba(255, 255, 255, 0.9);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.but2:hover {
+  background-color: #0071e3;
+  color: white;
+}
+
+.but2 h3 {
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.bcg.two2 .both {
+  padding-bottom: 3rem;
+}
+
+/* Cards Section */
+.mathorcard {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .mathorcard {
+    flex-direction: row;
+  }
+}
+
+.cardone,
+.cardtwo {
+  width: 100%;
+  text-align: center;
+  background-color: #f5f5f7;
+  padding: 2rem 1rem;
+  border-radius: 10px;
+}
+
+@media (min-width: 768px) {
+  .cardone,
+  .cardtwo {
+    width: 50%;
+  }
+}
+
+.card1 img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 1.5rem;
+}
+
+.ancorcard1 {
+  display: inline-block;
+  background-color: #0071e3;
+  padding: 0.75rem 1.5rem;
+  border-radius: 20px;
+  text-decoration: none;
+  color: white;
+  font-size: 0.875rem;
+  transition: background-color 0.3s;
+  margin-bottom: 1rem;
+}
+
+.ancorcard1:hover {
+  background-color: #0056b3;
+}
+
+.ancorcard2 {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 20px;
+  color: #0071e3;
+  border: 2px solid #0071e3;
+  text-decoration: none;
+  font-size: 0.875rem;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.ancorcard2:hover {
+  background-color: #0071e3;
+  color: white;
+}
+
+.imgecard img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 1.5rem;
+}
+
+/* Animation Sections */
+.animimom {
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 1rem 0;
+  position: relative;
+}
+
+.subanimimom {
+  display: flex;
+  animation: move 30s linear infinite;
+}
+
+.subanimimom img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  margin: 0 0.5rem;
+  border-radius: 8px;
+}
+
+@media (min-width: 768px) {
+  .subanimimom img {
+    width: 400px;
+    height: 250px;
+  }
+}
+
+@keyframes move {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.momdiv {
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 1rem 0;
+  margin: 1rem 0;
+}
+
+.submomdiv {
+  display: flex;
+  animation: scroll 30s linear infinite;
+}
+
+.submomdiv img {
+  width: 250px;
+  height: 140px;
+  object-fit: cover;
+  margin: 0 0.5rem;
+  border-radius: 8px;
+}
+
+@media (min-width: 768px) {
+  .submomdiv img {
+    width: 350px;
+    height: 200px;
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Legal Section */
+.legal {
+  background-color: #f5f5f7;
+  padding: 2rem 1rem;
+  color: #666;
+  font-size: 0.75rem;
+  line-height: 1.5;
+}
+
+.legal p {
+  margin-bottom: 1rem;
+  text-align: left;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.legal a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+.legal a:hover {
+  text-decoration: underline;
+}
+
+/* Footer Responsive Fixes */
+footer {
+  background-color: #f5f5f7;
+  padding: 2rem 1rem;
+}
+
+.foot {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.column a {
+  color: #424245;
+  text-decoration: none;
+  font-size: 0.75rem;
+  padding: 0.25rem 0;
+  transition: color 0.3s;
+}
+
+.column a:first-child {
+  font-weight: 600;
+  color: #1d1d1f;
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.column a:hover {
+  text-decoration: underline;
+  color: #0066cc;
+}
+
+.finaldiv {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 1rem 0;
+  border-top: 1px solid #d2d2d7;
+}
+
+.finaldiv p {
+  color: #6e6e73;
+  font-size: 0.75rem;
+  line-height: 1.33337;
+  margin-bottom: 0.5rem;
+}
+
+.finaldiv a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+.finaldiv a:hover {
+  text-decoration: underline;
+}
+
+/* Copyright Footer */
+footer > div:last-child {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 0;
+  border-top: 1px solid #d2d2d7;
+}
+
+footer > div:last-child p {
+  color: #6e6e73;
+  font-size: 0.75rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+footer > div:last-child a {
+  color: #424245;
+  text-decoration: none;
+  border-right: 1px solid #d2d2d7;
+  padding-right: 0.5rem;
+}
+
+footer > div:last-child a:last-child {
+  border-right: none;
+  margin-left: auto;
+  padding-right: 0;
+}
+
+footer > div:last-child a:hover {
+  text-decoration: underline;
+}
+
+/* Mobile Navigation Toggle */
+.mobile-nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 768px) {
+  .upper-list ul {
+    display: none;
+  }
+
+  .upper-list ul.show {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    padding: 1rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .mobile-nav-toggle {
+    display: block;
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .iPhone {
+    padding-top: 4rem;
+  }
+
+  .book {
+    padding-top: 300px;
+  }
+
+  .book h2 {
+    font-size: 1.5rem;
+  }
+
+  .book h3,
+  .book p {
+    font-size: 1rem;
+  }
+
+  .column a {
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .iPhone .h3 {
+    font-size: 1rem;
+  }
+
+  .but-1,
+  .but2,
+  .ipadh,
+  .ancorcard1,
+  .ancorcard2 {
+    padding: 0.5rem 1rem;
+    font-size: 0.75rem;
+  }
+
+  .foot {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .bcg {
+    height: 300px;
+  }
+
+  .book {
+    padding-top: 200px;
+  }
+}
